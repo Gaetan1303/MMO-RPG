@@ -1,0 +1,127 @@
+{
+  "name": "spring-boot-mmo-rpg-template",
+  "version": "1.0.0",
+  "description": "Template moderne pour créer des applications RPG multijoueurs avec Spring Boot",
+  "type": "template",
+  "template": {
+    "framework": "Spring Boot",
+    "language": "Java",
+    "version": "21",
+    "features": [
+      "JWT Authentication",
+      "Multi-character management", 
+      "WebSocket/STOMP real-time communication",
+      "PostgreSQL + H2 profiles",
+      "Mercure Hub SSE",
+      "Docker containerization",
+      "Integration tests",
+      "SOLID architecture"
+    ],
+    "customization": {
+      "script": "./scripts/customize.sh",
+      "packageRename": true,
+      "projectRename": true,
+      "configurable": [
+        "Database settings",
+        "JWT secrets",
+        "CORS origins",
+        "Character classes",
+        "Game mechanics"
+      ]
+    },
+    "deployment": {
+      "docker": {
+        "compose": true,
+        "multiStage": true,
+        "services": ["app", "db", "mercure", "caddy"]
+      },
+      "profiles": {
+        "dev": "H2 in-memory database",
+        "prod": "PostgreSQL with Docker",
+        "test": "H2 for testing"
+      }
+    },
+    "endpoints": {
+      "auth": [
+        "POST /auth/register",
+        "POST /auth/login"
+      ],
+      "characters": [
+        "POST /api/character/create",
+        "GET /api/character/me",
+        "GET /api/character/list",
+        "GET /api/character/classes"
+      ],
+      "websocket": {
+        "endpoint": "/ws",
+        "topics": [
+          "/topic/game/movement",
+          "/topic/game/combat"
+        ]
+      }
+    }
+  },
+  "requirements": {
+    "java": "21+",
+    "maven": "3.9+",
+    "docker": "20.10+",
+    "docker-compose": "2.0+"
+  },
+  "quickStart": {
+    "steps": [
+      "cp .env.example .env",
+      "docker-compose up -d --build",
+      "curl http://localhost:8080/health"
+    ],
+    "devMode": [
+      "./scripts/dev.sh"
+    ],
+    "customize": [
+      "./scripts/customize.sh \"MonProjet\" \"com.monentreprise.rpg\""
+    ]
+  },
+  "stack": {
+    "backend": {
+      "framework": "Spring Boot 3.5",
+      "security": "Spring Security 6 + JWT",
+      "database": "PostgreSQL 15 / H2",
+      "messaging": "WebSocket + STOMP",
+      "testing": "JUnit 5 + MockMvc"
+    },
+    "infrastructure": {
+      "containerization": "Docker + Docker Compose",
+      "proxy": "Caddy Server", 
+      "realtime": "Mercure Hub",
+      "build": "Maven 3.9"
+    }
+  },
+  "gameFeatures": {
+    "characterClasses": 18,
+    "statsSystem": "Final Fantasy Tactics Advanced",
+    "combat": "Turn-based strategy",
+    "movement": "Real-time positioning",
+    "multiPlayer": "WebSocket real-time communication"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/spring-boot-mmo-rpg-template"
+  },
+  "keywords": [
+    "spring-boot",
+    "mmo",
+    "rpg",
+    "template",
+    "websocket",
+    "jwt",
+    "postgresql",
+    "docker",
+    "java"
+  ],
+  "maintainers": [
+    {
+      "name": "Template Creator",
+      "email": "creator@example.com"
+    }
+  ]
+}

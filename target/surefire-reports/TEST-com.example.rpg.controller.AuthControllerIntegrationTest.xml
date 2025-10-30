@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.rpg.controller.AuthControllerIntegrationTest" time="9.747" tests="11" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/billy/MMO-RPG/target/test-classes:/home/billy/MMO-RPG/target/classes:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.6/spring-boot-starter-web-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.6/spring-boot-starter-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.6/spring-boot-starter-logging-3.5.6.jar:/home/billy/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/billy/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/billy/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/billy/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/billy/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/billy/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/billy/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.6/spring-boot-starter-json-3.5.6.jar:/home/billy/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.2/jackson-datatype-jdk8-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.2/jackson-datatype-jsr310-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.2/jackson-module-parameter-names-2.19.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.6/spring-boot-starter-tomcat-3.5.6.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.46/tomcat-embed-core-10.1.46.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.46/tomcat-embed-websocket-10.1.46.jar:/home/billy/.m2/repository/org/springframework/spring-web/6.2.11/spring-web-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-webmvc/6.2.11/spring-webmvc-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.6/spring-boot-starter-data-jpa-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.6/spring-boot-starter-jdbc-3.5.6.jar:/home/billy/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/home/billy/.m2/repository/org/springframework/spring-jdbc/6.2.11/spring-jdbc-6.2.11.jar:/home/billy/.m2/repository/org/hibernate/orm/hibernate-core/6.6.29.Final/hibernate-core-6.6.29.Final.jar:/home/billy/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/billy/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/billy/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/billy/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/billy/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/billy/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/billy/.m2/repository/net/bytebuddy/byte-buddy/1.17.7/byte-buddy-1.17.7.jar:/home/billy/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/billy/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/billy/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/billy/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/billy/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/billy/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/billy/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/billy/.m2/repository/org/springframework/data/spring-data-jpa/3.5.4/spring-data-jpa-3.5.4.jar:/home/billy/.m2/repository/org/springframework/data/spring-data-commons/3.5.4/spring-data-commons-3.5.4.jar:/home/billy/.m2/repository/org/springframework/spring-orm/6.2.11/spring-orm-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-tx/6.2.11/spring-tx-6.2.11.jar:/home/billy/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/billy/.m2/repository/org/springframework/spring-aspects/6.2.11/spring-aspects-6.2.11.jar:/home/billy/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.6/spring-boot-starter-security-3.5.6.jar:/home/billy/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-config/6.5.5/spring-security-config-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-web/6.5.5/spring-security-web-6.5.5.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-websocket/3.5.6/spring-boot-starter-websocket-3.5.6.jar:/home/billy/.m2/repository/org/springframework/spring-messaging/6.2.11/spring-messaging-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-websocket/6.2.11/spring-websocket-6.2.11.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.6/spring-boot-starter-actuator-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.6/spring-boot-actuator-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.6/spring-boot-actuator-3.5.6.jar:/home/billy/.m2/repository/io/micrometer/micrometer-observation/1.15.4/micrometer-observation-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-commons/1.15.4/micrometer-commons-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.4/micrometer-jakarta9-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-core/1.15.4/micrometer-core-1.15.4.jar:/home/billy/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/billy/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/3.5.6/spring-boot-configuration-processor-3.5.6.jar:/home/billy/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/home/billy/.m2/repository/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar:/home/billy/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.5/jjwt-api-0.12.5.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.5/jjwt-impl-0.12.5.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.5/jjwt-jackson-0.12.5.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.6/spring-boot-starter-validation-3.5.6.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.46/tomcat-embed-el-10.1.46.jar:/home/billy/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/billy/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-devtools/3.5.6/spring-boot-devtools-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot/3.5.6/spring-boot-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.6/spring-boot-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.6/spring-boot-starter-test-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-test/3.5.6/spring-boot-test-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.6/spring-boot-test-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/billy/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/billy/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/billy/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/billy/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/billy/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/billy/.m2/repository/org/assertj/assertj-core/3.27.4/assertj-core-3.27.4.jar:/home/billy/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/billy/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/billy/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/billy/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/billy/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/billy/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/billy/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/billy/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.7/byte-buddy-agent-1.17.7.jar:/home/billy/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/billy/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/billy/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/billy/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/billy/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-test/6.2.11/spring-test-6.2.11.jar:/home/billy/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-test/6.5.5/spring-security-test-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-core/6.5.5/spring-security-core-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-crypto/6.5.5/spring-security-crypto-6.5.5.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="APPLICATION_NAME" value="rpg-multijoueur"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/home/billy/.sdkman/candidates/java/25-tem/lib"/>
+    <property name="sun.java.command" value="/home/billy/MMO-RPG/target/surefire/surefirebooter-20251030144409455_3.jar /home/billy/MMO-RPG/target/surefire 2025-10-30T14-44-09_367-jvmRun1 surefire-20251030144409455_1tmp surefire_0-20251030144409455_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/billy/MMO-RPG/target/test-classes:/home/billy/MMO-RPG/target/classes:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.6/spring-boot-starter-web-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.6/spring-boot-starter-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.6/spring-boot-starter-logging-3.5.6.jar:/home/billy/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/billy/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/billy/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/billy/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/billy/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/billy/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/billy/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.6/spring-boot-starter-json-3.5.6.jar:/home/billy/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.2/jackson-datatype-jdk8-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.2/jackson-datatype-jsr310-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.2/jackson-module-parameter-names-2.19.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.6/spring-boot-starter-tomcat-3.5.6.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.46/tomcat-embed-core-10.1.46.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.46/tomcat-embed-websocket-10.1.46.jar:/home/billy/.m2/repository/org/springframework/spring-web/6.2.11/spring-web-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-webmvc/6.2.11/spring-webmvc-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.6/spring-boot-starter-data-jpa-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.6/spring-boot-starter-jdbc-3.5.6.jar:/home/billy/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/home/billy/.m2/repository/org/springframework/spring-jdbc/6.2.11/spring-jdbc-6.2.11.jar:/home/billy/.m2/repository/org/hibernate/orm/hibernate-core/6.6.29.Final/hibernate-core-6.6.29.Final.jar:/home/billy/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/billy/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/billy/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/billy/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/billy/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/billy/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/billy/.m2/repository/net/bytebuddy/byte-buddy/1.17.7/byte-buddy-1.17.7.jar:/home/billy/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/billy/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/billy/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/billy/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/billy/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/billy/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/billy/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/billy/.m2/repository/org/springframework/data/spring-data-jpa/3.5.4/spring-data-jpa-3.5.4.jar:/home/billy/.m2/repository/org/springframework/data/spring-data-commons/3.5.4/spring-data-commons-3.5.4.jar:/home/billy/.m2/repository/org/springframework/spring-orm/6.2.11/spring-orm-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-tx/6.2.11/spring-tx-6.2.11.jar:/home/billy/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/billy/.m2/repository/org/springframework/spring-aspects/6.2.11/spring-aspects-6.2.11.jar:/home/billy/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.6/spring-boot-starter-security-3.5.6.jar:/home/billy/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-config/6.5.5/spring-security-config-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-web/6.5.5/spring-security-web-6.5.5.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-websocket/3.5.6/spring-boot-starter-websocket-3.5.6.jar:/home/billy/.m2/repository/org/springframework/spring-messaging/6.2.11/spring-messaging-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-websocket/6.2.11/spring-websocket-6.2.11.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.6/spring-boot-starter-actuator-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.6/spring-boot-actuator-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.6/spring-boot-actuator-3.5.6.jar:/home/billy/.m2/repository/io/micrometer/micrometer-observation/1.15.4/micrometer-observation-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-commons/1.15.4/micrometer-commons-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.4/micrometer-jakarta9-1.15.4.jar:/home/billy/.m2/repository/io/micrometer/micrometer-core/1.15.4/micrometer-core-1.15.4.jar:/home/billy/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/home/billy/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-configuration-processor/3.5.6/spring-boot-configuration-processor-3.5.6.jar:/home/billy/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/home/billy/.m2/repository/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar:/home/billy/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.5/jjwt-api-0.12.5.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.5/jjwt-impl-0.12.5.jar:/home/billy/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.5/jjwt-jackson-0.12.5.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/home/billy/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.6/spring-boot-starter-validation-3.5.6.jar:/home/billy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.46/tomcat-embed-el-10.1.46.jar:/home/billy/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/home/billy/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-devtools/3.5.6/spring-boot-devtools-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot/3.5.6/spring-boot-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.6/spring-boot-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.6/spring-boot-starter-test-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-test/3.5.6/spring-boot-test-3.5.6.jar:/home/billy/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.6/spring-boot-test-autoconfigure-3.5.6.jar:/home/billy/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/billy/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/billy/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/billy/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/billy/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/billy/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/billy/.m2/repository/org/assertj/assertj-core/3.27.4/assertj-core-3.27.4.jar:/home/billy/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/billy/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/billy/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/billy/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/billy/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/billy/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/billy/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/billy/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/billy/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.7/byte-buddy-agent-1.17.7.jar:/home/billy/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/billy/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/billy/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/billy/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/billy/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar:/home/billy/.m2/repository/org/springframework/spring-test/6.2.11/spring-test-6.2.11.jar:/home/billy/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-test/6.5.5/spring-security-test-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-core/6.5.5/spring-security-core-6.5.5.jar:/home/billy/.m2/repository/org/springframework/security/spring-security-crypto/6.5.5/spring-security-crypto-6.5.5.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/billy"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="/home/billy/.sdkman/candidates/java/25-tem"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/billy/MMO-RPG"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/billy/MMO-RPG/target/surefire/surefirebooter-20251030144409455_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25+36-LTS"/>
+    <property name="user.name" value="billy"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.14.0-34-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-25+36"/>
+    <property name="localRepository" value="/home/billy/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="25"/>
+    <property name="user.dir" value="/home/billy/MMO-RPG"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="156763"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="25+36-LTS"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[rpg-multijoueur] "/>
+  </properties>
+  <testcase name="testRegisterMissingFields" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.416">
+    <system-out><![CDATA[2025-10-30T14:44:13.839+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-30T14:44:13.898+01:00  INFO 156763 --- [rpg-multijoueur] [           main] c.e.r.c.AuthControllerIntegrationTest    : Starting AuthControllerIntegrationTest using Java 25 with PID 156763 (started by billy in /home/billy/MMO-RPG)
+2025-10-30T14:44:13.899+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] c.e.r.c.AuthControllerIntegrationTest    : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-30T14:44:13.899+01:00  INFO 156763 --- [rpg-multijoueur] [           main] c.e.r.c.AuthControllerIntegrationTest    : The following 1 profile is active: "test"
+2025-10-30T14:44:15.521+01:00  INFO 156763 --- [rpg-multijoueur] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-30T14:44:15.582+01:00  INFO 156763 --- [rpg-multijoueur] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2025-10-30T14:44:16.983+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-30T14:44:17.079+01:00  INFO 156763 --- [rpg-multijoueur] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-30T14:44:17.174+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-30T14:44:17.378+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-30T14:44:17.411+01:00  INFO 156763 --- [rpg-multijoueur] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-30T14:44:17.864+01:00  INFO 156763 --- [rpg-multijoueur] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-30T14:44:17.869+01:00  INFO 156763 --- [rpg-multijoueur] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-30T14:44:17.918+01:00  WARN 156763 --- [rpg-multijoueur] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-30T14:44:17.969+01:00  INFO 156763 --- [rpg-multijoueur] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-30T14:44:19.329+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-30T14:44:19.345+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    drop table if exists characters cascade 
+Hibernate: 
+    drop table if exists characters cascade 
+2025-10-30T14:44:19.350+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    drop table if exists utilisateur_roles cascade 
+Hibernate: 
+    drop table if exists utilisateur_roles cascade 
+2025-10-30T14:44:19.351+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    drop table if exists utilisateurs cascade 
+Hibernate: 
+    drop table if exists utilisateurs cascade 
+2025-10-30T14:44:19.360+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    create table characters (
+        crit_rate integer not null,
+        current_hp integer not null,
+        current_mp integer not null,
+        destiny integer not null,
+        evade integer not null,
+        experience integer not null,
+        hit integer not null,
+        level integer not null,
+        magic_attack integer not null,
+        magic_defense integer not null,
+        magic_evade integer not null,
+        magic_hit integer not null,
+        max_hp integer not null,
+        max_mp integer not null,
+        move integer not null,
+        physical_attack integer not null,
+        physical_defense integer not null,
+        positionx float(53) not null,
+        positiony float(53) not null,
+        speed integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        utilisateur_id bigint not null,
+        name varchar(50) not null unique,
+        character_class enum ('BARD','BLACK_MAGE','CHEMIST','DANCER','DARK_KNIGHT','DRAGOON','GEOMANCER','KNIGHT','MIME','MONK','MYSTIC','NINJA','SAMURAI','SQUIRE','SUMMONER','THIEF','TIME_MAGE','WHITE_MAGE') not null,
+        state enum ('COMBAT','HUB','MORT','SOCIAL') not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table characters (
+        crit_rate integer not null,
+        current_hp integer not null,
+        current_mp integer not null,
+        destiny integer not null,
+        evade integer not null,
+        experience integer not null,
+        hit integer not null,
+        level integer not null,
+        magic_attack integer not null,
+        magic_defense integer not null,
+        magic_evade integer not null,
+        magic_hit integer not null,
+        max_hp integer not null,
+        max_mp integer not null,
+        move integer not null,
+        physical_attack integer not null,
+        physical_defense integer not null,
+        positionx float(53) not null,
+        positiony float(53) not null,
+        speed integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        utilisateur_id bigint not null,
+        name varchar(50) not null unique,
+        character_class enum ('BARD','BLACK_MAGE','CHEMIST','DANCER','DARK_KNIGHT','DRAGOON','GEOMANCER','KNIGHT','MIME','MONK','MYSTIC','NINJA','SAMURAI','SQUIRE','SUMMONER','THIEF','TIME_MAGE','WHITE_MAGE') not null,
+        state enum ('COMBAT','HUB','MORT','SOCIAL') not null,
+        primary key (id)
+    )
+2025-10-30T14:44:19.376+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    create table utilisateur_roles (
+        utilisateur_id bigint not null,
+        role varchar(255)
+    )
+Hibernate: 
+    create table utilisateur_roles (
+        utilisateur_id bigint not null,
+        role varchar(255)
+    )
+2025-10-30T14:44:19.378+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    create table utilisateurs (
+        enabled boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        username varchar(50) not null unique,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table utilisateurs (
+        enabled boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        username varchar(50) not null unique,
+        email varchar(255) not null unique,
+        password varchar(255) not null,
+        primary key (id)
+    )
+2025-10-30T14:44:19.380+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    alter table if exists characters 
+       add constraint FKmtfwugygwodkxc9yal0of4c9e 
+       foreign key (utilisateur_id) 
+       references utilisateurs
+Hibernate: 
+    alter table if exists characters 
+       add constraint FKmtfwugygwodkxc9yal0of4c9e 
+       foreign key (utilisateur_id) 
+       references utilisateurs
+2025-10-30T14:44:19.395+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    alter table if exists utilisateur_roles 
+       add constraint FK7fm9de8itma0gr6wpblfr5o0o 
+       foreign key (utilisateur_id) 
+       references utilisateurs
+Hibernate: 
+    alter table if exists utilisateur_roles 
+       add constraint FK7fm9de8itma0gr6wpblfr5o0o 
+       foreign key (utilisateur_id) 
+       references utilisateurs
+2025-10-30T14:44:19.401+01:00  INFO 156763 --- [rpg-multijoueur] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-30T14:44:20.019+01:00  INFO 156763 --- [rpg-multijoueur] [           main] c.example.rpg.websocket.WebSocketConfig  : Message broker configuré - /topic, /queue, /app
+2025-10-30T14:44:20.235+01:00  WARN 156763 --- [rpg-multijoueur] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-30T14:44:20.278+01:00  INFO 156763 --- [rpg-multijoueur] [           main] c.example.rpg.websocket.WebSocketConfig  : Endpoints STOMP enregistrés - /ws (natif) et /ws-sockjs (avec SockJS)
+2025-10-30T14:44:20.819+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-10-30T14:44:20.878+01:00  INFO 156763 --- [rpg-multijoueur] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authProvider
+2025-10-30T14:44:20.879+01:00  WARN 156763 --- [rpg-multijoueur] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-30T14:44:21.023+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-30T14:44:21.643+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] com.example.rpg.service.JwtFilter        : Filter 'jwtFilter' configured for use
+2025-10-30T14:44:21.644+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-30T14:44:21.644+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-30T14:44:21.646+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-10-30T14:44:21.745+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-10-30T14:44:21.746+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@78ded8c9]]
+2025-10-30T14:44:21.747+01:00  INFO 156763 --- [rpg-multijoueur] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-10-30T14:44:21.771+01:00  INFO 156763 --- [rpg-multijoueur] [           main] c.e.r.c.AuthControllerIntegrationTest    : Started AuthControllerIntegrationTest in 7.933 seconds (process running for 12.259)
+2025-10-30T14:44:22.094+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.204+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.217+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.225+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterInvalidEmail" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.016">
+    <system-out><![CDATA[2025-10-30T14:44:22.389+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.391+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.392+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.393+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginSuccess" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.432">
+    <system-out><![CDATA[2025-10-30T14:44:22.406+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.410+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.411+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.412+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:22.469+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:22.474+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:22.602+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-30T14:44:22.633+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+2025-10-30T14:44:22.727+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:22.736+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-10-30T14:44:22.737+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.738+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-10-30T14:44:22.744+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:22.750+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+2025-10-30T14:44:22.829+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterDuplicateUsername" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.112">
+    <system-out><![CDATA[2025-10-30T14:44:22.839+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.842+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+2025-10-30T14:44:22.848+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+Hibernate: 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+2025-10-30T14:44:22.852+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+2025-10-30T14:44:22.856+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.857+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.858+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:22.860+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:22.863+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:22.931+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-30T14:44:22.932+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+2025-10-30T14:44:22.934+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:22.937+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.938+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.938+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:22.941+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginMissingFields" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.02">
+    <system-out><![CDATA[2025-10-30T14:44:22.953+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.954+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+2025-10-30T14:44:22.956+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+Hibernate: 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+2025-10-30T14:44:22.957+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+2025-10-30T14:44:22.959+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-10-30T14:44:22.960+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.961+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterDuplicateEmail" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.156">
+    <system-out><![CDATA[2025-10-30T14:44:22.976+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:22.979+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:22.980+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:22.981+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:22.983+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:22.986+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.056+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-30T14:44:23.060+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+2025-10-30T14:44:23.066+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:23.075+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:23.076+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.077+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:23.082+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.084+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginInvalidUsername" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.033">
+    <system-out><![CDATA[2025-10-30T14:44:23.133+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:23.134+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+2025-10-30T14:44:23.136+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+Hibernate: 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+2025-10-30T14:44:23.138+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+2025-10-30T14:44:23.141+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-10-30T14:44:23.143+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.144+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-10-30T14:44:23.149+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterUsernameTooShort" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.027">
+    <system-out><![CDATA[2025-10-30T14:44:23.171+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:23.174+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:23.175+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.176+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterPasswordTooShort" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.024">
+    <system-out><![CDATA[2025-10-30T14:44:23.199+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:23.203+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:23.204+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.204+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginInvalidPassword" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.197">
+    <system-out><![CDATA[2025-10-30T14:44:23.228+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:23.235+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:23.236+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.237+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:23.246+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.249+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.327+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-30T14:44:23.329+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+2025-10-30T14:44:23.332+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:23.336+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-10-30T14:44:23.336+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.336+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-10-30T14:44:23.338+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2025-10-30T14:44:23.340+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterSuccess" classname="com.example.rpg.controller.AuthControllerIntegrationTest" time="0.097">
+    <system-out><![CDATA[2025-10-30T14:44:23.422+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2025-10-30T14:44:23.424+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+Hibernate: 
+    select
+        r1_0.utilisateur_id,
+        r1_0.role 
+    from
+        utilisateur_roles r1_0 
+    where
+        r1_0.utilisateur_id=?
+2025-10-30T14:44:23.426+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+Hibernate: 
+    delete 
+    from
+        utilisateur_roles 
+    where
+        utilisateur_id=?
+2025-10-30T14:44:23.426+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        utilisateurs 
+    where
+        id=?
+2025-10-30T14:44:23.428+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2025-10-30T14:44:23.429+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-30T14:44:23.430+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2025-10-30T14:44:23.432+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.435+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-10-30T14:44:23.508+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        utilisateurs
+        (created_at, email, enabled, password, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-30T14:44:23.509+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        utilisateur_roles
+        (utilisateur_id, role) 
+    values
+        (?, ?)
+2025-10-30T14:44:23.511+01:00 DEBUG 156763 --- [rpg-multijoueur] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+]]></system-out>
+  </testcase>
+</testsuite>

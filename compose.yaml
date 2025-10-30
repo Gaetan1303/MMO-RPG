@@ -1,0 +1,94 @@
+services:
+  #  Application Spring Boot
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      mercure:
+        condition: service_started
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      JWT_SECRET: ${JWT_SECRET}
+      MERCURE_URL: http://mercure/.well-known/mercure
+      MERCURE_JWT_SECRET: ${MERCURE_JWT_SECRET}
+    networks:
+      - backend
+      - frontend
+    restart: unless-stopped
+
+  #  Base de données PostgreSQL
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  #  Mercure Hub (avec Caddy intégré)
+  mercure:
+    image: dunglas/mercure:latest
+    restart: unless-stopped
+    environment:
+      SERVER_NAME: ':80'
+      MERCURE_PUBLISHER_JWT_KEY: ${MERCURE_JWT_SECRET}
+      MERCURE_SUBSCRIBER_JWT_KEY: ${MERCURE_JWT_SECRET}
+      MERCURE_EXTRA_DIRECTIVES: |
+        cors_origins *
+        anonymous
+    volumes:
+      - ./mercure/Caddyfile:/etc/caddy/Caddyfile:ro
+      - mercure_data:/data
+      - mercure_config:/config
+    ports:
+      - "8081:80"
+    networks:
+      - frontend
+
+  #  Reverse Proxy Caddy
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+      - mercure
+    networks:
+      - frontend
+
+volumes:
+  pgdata:
+  mercure_data:
+  mercure_config:
+  caddy_data:
+  caddy_config:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
